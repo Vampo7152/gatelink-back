@@ -7,7 +7,7 @@ const connectToMongo = async () => {
     mongoose.connect(constants.mongoDbConnectionUrl as string, {
       ssl: true,
     });
-    console.log("[📦] Connected to MongoDB");
+    console.log("[📦] Connected to MongoDB now!");
   } catch (error) {
     console.log("[📦] Error while connecting to MongoDB");
     console.error(error);
