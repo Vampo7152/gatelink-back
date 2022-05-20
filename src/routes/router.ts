@@ -7,6 +7,7 @@ import verifyTokenAuthority from "../controllers/verify/token";
 import getTokenResourceInfo from "../controllers/info/token";
 import getNftResourceInfo from "../controllers/info/nft";
 import resourcesByUser from "../controllers/info/resourcesByUser";
+import ping from "../controllers/ping";
 
 import verifyToken from "../middlewares/verifyToken";
 
@@ -19,5 +20,6 @@ router.post("/verify/token", verifyTokenAuthority);
 router.post("/info/nft", verifyToken, getNftResourceInfo);
 router.post("/info/token", verifyToken, getTokenResourceInfo);
 router.post("/info/resourcesByUser", verifyToken, resourcesByUser);
+router.get("/ping", verifyToken, ping);
 
 export default router;
