@@ -9,7 +9,7 @@ const createResourceViaToken = async (req: Request, res: Response) => {
   const title = req.body.title;
   const description = req.body.description;
   const url = req.body.url;
-  const mintAddress = req.body.mintAddress;
+  const mintAddress = req.body.mintAddress.replace(/ +/g, "_");
   const tokenName = req.body.tokenName;
   const amount = req.body.amount;
 

@@ -9,7 +9,7 @@ const createResourceViaNft = async (req: Request, res: Response) => {
   const title = req.body.title;
   const description = req.body.description;
   const url = req.body.url;
-  const updateAuthority = req.body.updateAuthority;
+  const updateAuthority = req.body.updateAuthority.replace(/ +/g, "_");
   const nftName = req.body.nftName;
   const nftMarketplace = req.body.nftMarketplace;
 
@@ -55,3 +55,4 @@ const createResourceViaNft = async (req: Request, res: Response) => {
 };
 
 export default createResourceViaNft;
+
