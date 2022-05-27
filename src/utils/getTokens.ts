@@ -1,6 +1,11 @@
 import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 
+/**
+ *
+ * @param walletAddress
+ * @returns All the tokens that the wallet has
+ */
 const getTokens = async (walletAddress: string) => {
   const tokens: any[] = [];
 

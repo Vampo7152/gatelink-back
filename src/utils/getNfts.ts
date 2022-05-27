@@ -8,7 +8,7 @@ const getNfts = async (address: string) => {
   const nfts: string[] = [];
 
   const connection = new web3.Connection(
-    web3.clusterApiUrl("mainnet-beta"),
+    web3.clusterApiUrl("devnet"),
     "confirmed"
   );
 
@@ -29,3 +29,4 @@ const getNfts = async (address: string) => {
 };
 
 export default getNfts;
+
